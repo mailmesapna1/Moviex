@@ -18,7 +18,7 @@ const HeroBanner = () => {
       const bg = url.backdrop + data?.results?.[Math.floor(Math.random() *
          20)].backdrop_path;
       setBackground(bg);
-    })
+    },[data])
 
     const searchQueryhandler = (event) =>{
         if(event.key === "Enter" && query.length > 0){
